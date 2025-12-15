@@ -14,23 +14,36 @@ async function readJSON(filePath) {
 readJSON('https://raw.githubusercontent.com/Mojang/bedrock-samples/refs/heads/main/metadata/command_modules/mojang-commands.json');
 
 function GeneratePermissionName(value) {
-	switch (value) {
-		default: return `<h6 style="color: red;">Fail to find a value :(</h6>`;
-		case 0:
-			return `<a href="${cmdPermissionLink}#any">Any<a>`
-		break;
-		case 1:
-			return `<a href="${cmdPermissionLink}#gamedirectors">GameDirectors<a>`
-		break;
-		case 2:
-			return `<a href="${cmdPermissionLink}#admin">Admin<a>`
-		break;
-		case 3:
-			return `<a href="${cmdPermissionLink}#host">Host<a>`
-		break;
-		case 4:
-			return `<a href="${cmdPermissionLink}#owner">Owner<a>`
-		break;
+	switch (value) {
+
+		default: return `<h6 style="color: red;">Fail to find a value :(</h6>`;
+
+		case 0:
+
+			return `<a href="${cmdPermissionLink}#any">Any<a>`;
+		break;
+
+		case 1:
+
+			return `<a href="${cmdPermissionLink}#gamedirectors">GameDirectors<a>`;
+
+		break;
+
+		case 2:
+
+			return `<a href="${cmdPermissionLink}#admin">Admin<a>`;
+		break;
+
+		case 3:
+
+			return `<a href="${cmdPermissionLink}#host">Host<a>`;
+		break;
+
+		case 4:
+
+			return `<a href="${cmdPermissionLink}#owner">Owner<a>`;
+		break;
+
 	}
 }
 
@@ -59,4 +72,5 @@ function startInnerHTML(jsonContent) {
 		count++
 	}
 	while (count < jsonContent.commands.length);
+
 }
