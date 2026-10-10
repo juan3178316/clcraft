@@ -11,8 +11,6 @@ async function readJSON(filePath = null) {
 	}
 }
 
-readJSON('https://raw.githubusercontent.com/Mojang/bedrock-samples/refs/heads/main/metadata/command_modules/mojang-commands.json');
-
 function GeneratePermissionName(value = null) {
 	switch (value) {
 
@@ -40,7 +38,6 @@ function GeneratePermissionName(value = null) {
 
 	}
 }
-
 function startInnerHTML(jsonContent = {}) {
 	let count = 0;
 	const setCommands = document.getElementById('command-generator');
@@ -68,3 +65,5 @@ function startInnerHTML(jsonContent = {}) {
 	while (count < jsonContent.commands.length);
 
 }
+
+readJSON('https://raw.githubusercontent.com/Mojang/bedrock-samples/refs/heads/main/metadata/command_modules/mojang-commands.json');
