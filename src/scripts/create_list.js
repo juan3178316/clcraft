@@ -1,5 +1,5 @@
 // this file is necessary for working the page: https://juan3178316.github.io/clcraft/list working correctly. :)
-const cmdPermissionLink = "https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/commandpermissionlevel?view=minecraft-bedrock-stable";
+const permissionURL = "https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/commandpermissionlevel?view=minecraft-bedrock-stable";
 async function readJSON(filePath = null) {
 	try {
 		const request = await fetch(filePath);
@@ -20,23 +20,23 @@ function GeneratePermissionName(value = null) {
 
 		case 0:
 
-			return `<a href="${cmdPermissionLink}#any">Any<a>`;
+			return `<a href="${permissionURL}#any">Any<a>`;
 
 		case 1:
 
-			return `<a href="${cmdPermissionLink}#gamedirectors">GameDirectors<a>`;
+			return `<a href="${permissionURL}#gamedirectors">GameDirectors<a>`;
 
 		case 2:
 
-			return `<a href="${cmdPermissionLink}#admin">Admin<a>`;
+			return `<a href="${permissionURL}#admin">Admin<a>`;
 
 		case 3:
 
-			return `<a href="${cmdPermissionLink}#host">Host<a>`;
+			return `<a href="${permissionURL}#host">Host<a>`;
 
 		case 4:
 
-			return `<a href="${cmdPermissionLink}#owner">Owner<a>`;
+			return `<a href="${permissionURL}#owner">Owner<a>`;
 
 	}
 }
