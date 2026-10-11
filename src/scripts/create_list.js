@@ -1,10 +1,5 @@
-let setDiv = document.createElement('div');
-		setDiv.setAttribute('id', `command-0`);
-		setCommands.appendChild(setDiv);
-
-		document.getElementById(`command-0`).innerHTML = "Homa";
 // this file is necessary for working the page: https://juan3178316.github.io/clcraft/list working correctly. :)
-/*const permissionURL = "https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/commandpermissionlevel?view=minecraft-bedrock-stable";
+const permissionURL = "https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/commandpermissionlevel?view=minecraft-bedrock-stable";
 const fileURL = "https://raw.githubusercontent.com/Mojang/bedrock-samples/refs/heads/main/metadata/command_modules/mojang-commands.json";
 
 async function qFileURL(filePath) {
@@ -62,4 +57,4 @@ function loadPermissionsRule(value) {
 	}
 }
 
-qFileURL(fileURL);*/
+qFileURL(fileURL);
