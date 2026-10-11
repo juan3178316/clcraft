@@ -23,7 +23,7 @@ function startInnerHTML(JSONData = {}) {
 		setCommands.appendChild(setDiv);
 
 		document.getElementById(`command-${count}`).innerHTML = `
-<h2>${cmdId.name}</h2>
+<h2>${cmdId.name} 1</h2>
 <p>${cmdId.description}</p>
 <h4>• Command: ${cmdId.name.toLowerCase()} ${cmdId.overloads[0].params}</h4>
 <h4>Properties:</h4>
