@@ -2,7 +2,7 @@
 const permissionURL = "https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/commandpermissionlevel?view=minecraft-bedrock-stable";
 const fileURL = "https://raw.githubusercontent.com/Mojang/bedrock-samples/refs/heads/main/metadata/command_modules/mojang-commands.json";
 
-async function qFileURL(filePath = null) {
+async function qFileURL(filePath) {
 	try {
 		let request = await fetch(filePath);
 		let queries = await request.json();
@@ -13,7 +13,7 @@ async function qFileURL(filePath = null) {
 	}
 }
 
-function startInnerHTML(JSONData = {}) {
+function startInnerHTML(JSONData) {
 	let count = 0;
 	let setCommands = document.getElementById('command-generator');
 	do {
@@ -41,7 +41,7 @@ function startInnerHTML(JSONData = {}) {
 
 }
 
-function loadPermissionsRule(value = null) {
+function loadPermissionsRule(value) {
 	let categories = value;
 	switch (categories) {
 		default: return `<h6 style="color: red;">Fail to find a value :(</h6>`;
