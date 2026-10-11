@@ -25,8 +25,7 @@ function startInnerHTML(JSONData = {}) {
 		document.getElementById(`command-${count}`).innerHTML = `
 <h2>${cmdId.name}</h2>
 <p>${cmdId.description}</p>
-<h4>• Command:
-/${cmdId.name.toLowerCase()} ${cmdId.overloads[0].params}</h4>
+<h4>• Command: ${cmdId.name.toLowerCase()} ${cmdId.overloads[0].params}</h4>
 <h4>Properties:</h4>
 <h4>Metadata</h4>
 <p>• Permission level: ${loadPermissionsRule(cmdId.permission_level)}</p>
