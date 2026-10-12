@@ -43,7 +43,7 @@ function startInnerHTML(JSONData) {
 <h4>Properties:</h4>
 <h4>Metadata</h4>
 <p>• Permission level: ${loadPermissionsRule(cmdId.permission_level)}</p>
-<p>• Requires cheats: ${cmdId.requires_cheats ? '<div style="color: red">true</div>' : '<div style="color: #40cb40">false</div>'}</p>
+<p>• Requires cheats: ${cmdId.requires_cheats ? '<strong style="color: red">true</strong>' : '<strong style="color: #40cb40">false</strong>'}</p>
 <hr style="border: 2px solid gold;"></hr>
 `;
 
