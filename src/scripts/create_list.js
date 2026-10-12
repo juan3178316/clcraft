@@ -4,12 +4,25 @@ const fileURL = "https://raw.githubusercontent.com/Mojang/bedrock-samples/refs/h
 
 async function qFileURL(filePath) {
 	try {
-		let request = await fetch(filePath);
+		let cached = localStorage.getItem("json-cache");
+		if (cached) {
+			let { data, timestamp } = JSON.parse(cached);
+			if (Date.now() - timestamp < 216e5) {
+				return startInnerHTML(data);
+			}
+		}
+		let request = await fetch(filePath, { cache: "default" });
 		let queries = await request.json();
+		localStorage.setItem("json-cache", JSON.stringify({ data: queries, timestamp: Date.now() }));
 		return startInnerHTML(queries);
 	}
 	catch (e) {
 		console.error('Error to read JSON file: ', e);
+		let cached = localStorage.getItem("json-cache");
+		if (cached) {
+			console.warn('Loading expired cache');
+			return startInnerHTML(JSON.parse(cached).data);
+		}
 	}
 }
 
